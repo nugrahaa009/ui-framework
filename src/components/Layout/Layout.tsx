@@ -1,19 +1,22 @@
+import React from 'react';
 import { Layout as AntLayout } from 'antd';
 
-export const Header: React.FC<React.ComponentProps<typeof AntLayout.Header>> = (props) => {
-  return <AntLayout.Header {...props} />;
-};
+const { Header: AntHeader, Content: AntContent, Footer: AntFooter, Sider: AntSider } = AntLayout;
 
-export const Content: React.FC<React.ComponentProps<typeof AntLayout.Content>> = (props) => {
-  return <AntLayout.Content {...props} />;
-};
+export const Header: React.FC<React.ComponentProps<typeof AntHeader>> = (props) => (
+  <AntHeader {...props} />
+);
 
-export const Footer: React.FC<React.ComponentProps<typeof AntLayout.Footer>> = (props) => {
-  return <AntLayout.Footer {...props} />;
-};
+export const Content: React.FC<React.ComponentProps<typeof AntContent>> = (props) => (
+  <AntContent {...props} />
+);
 
-export const Sider: React.FC<React.ComponentProps<typeof AntLayout.Sider>> = (props) => {
-  return <AntLayout.Sider {...props} />;
-};
+export const Footer: React.FC<React.ComponentProps<typeof AntFooter>> = (props) => (
+  <AntFooter {...props} />
+);
 
-export const Layout = AntLayout;
+export const Sider: React.FC<React.ComponentProps<typeof AntSider>> = (props) => (
+  <AntSider {...props} />
+);
+
+export const BaseLayout = AntLayout;
