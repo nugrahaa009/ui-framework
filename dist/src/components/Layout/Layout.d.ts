@@ -1,8 +1,3 @@
-import React from 'react';
-export type LayoutProps = {
-    header?: React.ReactNode;
-    footer?: React.ReactNode;
-    sider?: React.ReactNode;
-    children: React.ReactNode;
-};
+import { LayoutProps } from 'antd';
+export type { LayoutProps };
 export declare const Layout: React.FC<LayoutProps>;

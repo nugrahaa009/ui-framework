@@ -1,4 +1,3 @@
-import React from 'react';
-import { InputProps as AntInputProps } from 'antd';
-export type InputProps = AntInputProps;
+import { InputProps } from 'antd';
+export type { InputProps };
 export declare const Input: React.FC<InputProps>;
