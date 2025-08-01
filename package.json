@@ -4,9 +4,13 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
+  "keywords": ["ui", "design-system", "antd"],
+  "author": "Aditya Nugraha",
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^5.26.7"
+  },
   "scripts": {
     "build": "tsc"
   },
@@ -14,16 +18,14 @@
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
-  "dependencies": {
-    "antd": "^5.26.7"
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
   },
-  "keywords": [
-    "ui",
-    "design-system",
-    "antd"
-  ],
-  "author": "Aditya Nugraha",
-  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
