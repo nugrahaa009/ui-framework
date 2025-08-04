@@ -15,6 +15,7 @@
   "author": "Aditya Nugraha",
   "license": "MIT",
   "dependencies": {
+    "@ant-design/icons": "^6.0.0",
     "antd": "^5.26.7"
   },
   "scripts": {

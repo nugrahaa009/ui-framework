@@ -1,10 +1,37 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Breadcrumb, Menu, type MenuProps } from 'antd';
+import { BaseLayout as Layout, Header, Content, Footer, Sider } from './Layout';
+import { DesktopOutlined, PieChartOutlined, UserOutlined } from '@ant-design/icons';
 
-import { BaseLayout, Header, Content, Footer, Sider } from './Layout';
+type MenuItem = Required<MenuProps>['items'][number];
 
-const meta: Meta<typeof BaseLayout> = {
+function getItem(
+  label: React.ReactNode,
+  key: React.Key,
+  icon?: React.ReactNode,
+  children?: MenuItem[],
+): MenuItem {
+  return {
+    key,
+    icon,
+    children,
+    label,
+  } as MenuItem;
+}
+
+const items: MenuItem[] = [
+  getItem('Option 1', '1', <PieChartOutlined />),
+  getItem('Option 2', '2', <DesktopOutlined />),
+  getItem('Option 3', '3', <UserOutlined />, [
+    getItem('Option 4', 'Option 4'),
+    getItem('Option 5', 'Option 5'),
+    getItem('Option 6', 'Option 6'),
+  ]),
+];
+
+const meta: Meta<typeof Layout> = {
   title: 'Components/Layout',
-  component: BaseLayout,
+  component: Layout,
   parameters: {
     layout: 'fullscreen',
   },
@@ -13,27 +40,35 @@ const meta: Meta<typeof BaseLayout> = {
 
 export default meta;
 
-type Story = StoryObj<typeof BaseLayout>;
+type Story = StoryObj<typeof Layout>;
 
 export const FullLayoutWithSider: Story = {
+  
   render: () => (
-    <BaseLayout style={{ minHeight: '100vh' }}>
-      <Sider
-        width={200}
-        style={{
-          background: '#001529',
-          color: '#fff',
-          padding: '16px',
-          borderRadius: "0px 8px 8px 0px"
-        }}
-      >
-        Sidebar
+    <Layout style={{ minHeight: '100vh' }}>
+      <Sider>
+        <div className="demo-logo-vertical" />
+        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
-      <BaseLayout>
-        <Header style={{ background: '#fff' }}>Header</Header>
-        <Content style={{ padding: 50 }}>Content</Content>
-        <Footer style={{ background: '#fff', textAlign: 'center' }}>Footer</Footer>
-      </BaseLayout>
-    </BaseLayout>
+      <Layout>
+        <Header style={{ padding: 0, background: '#fff' }} />
+        <Content style={{ margin: '0 16px' }}>
+          <Breadcrumb style={{ margin: '16px 0' }} items={[{ title: 'Dashboard' }, { title: 'Option 1' }]} />
+          <div
+            style={{
+              padding: 24,
+              minHeight: 360,
+              background: '#fff',
+              borderRadius: 6,
+            }}
+          >
+            Option 1
+          </div>
+        </Content>
+        <Footer style={{ textAlign: 'center', background: '#fff' }}>
+            BRI ©{new Date().getFullYear()}
+          </Footer>
+      </Layout>
+    </Layout>
   ),
 };
