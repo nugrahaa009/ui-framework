@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout as AntLayout } from 'antd';
 
 const { Header: AntHeader, Content: AntContent, Footer: AntFooter, Sider: AntSider } = AntLayout;
