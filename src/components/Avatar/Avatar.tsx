@@ -1,6 +1,5 @@
-import React from 'react'
-import { Avatar as AntAvatar, AvatarProps as AntAvatarProps } from 'antd'
 import styled from 'styled-components'
+import { Avatar as AntAvatar, AvatarProps as AntAvatarProps } from 'antd'
 
 export interface AvatarProps extends AntAvatarProps {}
 

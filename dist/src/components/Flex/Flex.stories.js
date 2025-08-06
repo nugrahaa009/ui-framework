@@ -2,15 +2,16 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Flex } from './Flex';
 import styled from 'styled-components';
 const Box = styled.div `
-  background-color: #1890ff
-  color: white
-  padding: 16px
-  border-radius: 4px
-  text-align: center
+  background-color: #1890ff;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  text-align: center;
 `;
 const meta = {
     title: 'components/Flex',
     component: Flex,
+    tags: ['autodocs'],
     args: {
         justify: 'center',
         align: 'center',
