@@ -4,7 +4,7 @@ const meta = {
     component: Input,
     tags: ['autodocs'],
     args: {
-        placeholder: 'Enter text...',
+        placeholder: 'Placeholder',
     },
     argTypes: {
         size: {

@@ -1,24 +1,24 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Input, Button, Space } from 'antd';
-import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import { Form } from './Form'
+import { Input, Button, Space } from 'antd'
+import { Meta, StoryObj } from '@storybook/react'
+import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 
 const meta: Meta<typeof Form> = {
   title: 'Components/Form',
   component: Form,
   tags: ['autodocs'],
-};
-export default meta;
+}
+export default meta
 
-type Story = StoryObj<typeof Form>;
+type Story = StoryObj<typeof Form>
 
 export const WithItemAndList: Story = {
   render: () => {
-    const [form] = Form.useForm();
+    const [form] = Form.useForm()
 
     const onFinish = (values: any) => {
-      console.log('Form values:', values);
-    };
+      console.log('Form values:', values)
+    }
 
     return (
       <Form form={form} layout="vertical" onFinish={onFinish}>
@@ -69,6 +69,6 @@ export const WithItemAndList: Story = {
           </Button>
         </Form.Item>
       </Form>
-    );
+    )
   },
-};
+}

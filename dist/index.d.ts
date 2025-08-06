@@ -7,6 +7,8 @@ export * from './src/components/List/List';
 export * from './src/components/Typography/Typography';
 export * from './src/components/ConfigProvider/ConfigProvider';
 export * from './src/components/Form/Form';
+export * from './src/components/Icons/Icons';
+export * from './src/components/Flex/Flex';
 export declare const Layout: import("react").ForwardRefExoticComponent<import("antd").LayoutProps & import("react").RefAttributes<HTMLElement>> & {
     Header: import("react").ForwardRefExoticComponent<import("antd").LayoutProps & import("react").RefAttributes<HTMLElement>>;
     Footer: import("react").ForwardRefExoticComponent<import("antd").LayoutProps & import("react").RefAttributes<HTMLElement>>;

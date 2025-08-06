@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BaseLayout } from './Layout';
-declare const meta: Meta<typeof BaseLayout>;
+import { BaseLayout as Layout } from './Layout';
+declare const meta: Meta<typeof Layout>;
 export default meta;
-type Story = StoryObj<typeof BaseLayout>;
+type Story = StoryObj<typeof Layout>;
 export declare const FullLayoutWithSider: Story;
