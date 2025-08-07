@@ -15,6 +15,7 @@ export * from './src/components/Avatar/Avatar';
 export * from './src/components/Divider/Divider';
 export * from './src/components/Dropdown/Dropdown';
 export * from './src/components/Menu/Menu';
+export * from './src/components/Tooltip/Tooltip';
 export type { MenuProps } from './src/components/Menu/Menu';
 export declare const Layout: import("react").ForwardRefExoticComponent<import("antd").LayoutProps & import("react").RefAttributes<HTMLElement>> & {
     Header: import("react").ForwardRefExoticComponent<import("antd").LayoutProps & import("react").RefAttributes<HTMLElement>>;

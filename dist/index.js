@@ -15,6 +15,7 @@ export * from './src/components/Avatar/Avatar';
 export * from './src/components/Divider/Divider';
 export * from './src/components/Dropdown/Dropdown';
 export * from './src/components/Menu/Menu';
+export * from './src/components/Tooltip/Tooltip';
 import { BaseLayout } from './src//components/Layout/Layout';
 import { Header, Content, Footer, Sider } from './src/components/Layout/Layout';
 export const Layout = Object.assign(BaseLayout, {
